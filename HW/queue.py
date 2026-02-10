@@ -28,3 +28,13 @@ class Stack:
     
     def is_empty(self):
         return len(self.items) == 0
+    
+queue=Queue()
+for i in range(5):
+    queue.push(i)
+    print(queue.items)
+queue.pop()
+print(queue.items)
+for i in range(5):
+    queue.pop()
+    print(queue.items)
