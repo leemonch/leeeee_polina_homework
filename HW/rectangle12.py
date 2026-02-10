@@ -1,9 +1,9 @@
 class Rectangle:
     def __init__(self, corner1, corner2):
-        self.left = min(corner1[0], corner2[0])
-        self.top = max(corner1[1], corner2[1])
-        self.right = max(corner1[0], corner2[0])
-        self.bottom = min(corner1[1], corner2[1])
+        self.left = min(corner1[0], corner2[0]) #x
+        self.top = max(corner1[1], corner2[1]) #y
+        self.right = max(corner1[0], corner2[0]) #x
+        self.bottom = min(corner1[1], corner2[1]) #y
 
         self.width = self.right - self.left
         self.height = self.top - self.bottom
@@ -36,3 +36,10 @@ class Rectangle:
         self.right = self.left + self.width
         self.bottom = self.top - self.height
 
+
+rectangle = Rectangle((3.0012,4.0032),(2.0033,3.0035))
+print(rectangle.perimeter())
+print(rectangle.area())
+rectangle.move(2,2)
+print(rectangle.perimeter())
+print(rectangle.area())
